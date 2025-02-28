@@ -1,6 +1,9 @@
 import { Text, type TextProps, StyleSheet } from 'react-native';
 
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { useColorScheme } from 'react-native';
+
+const isDarkMode = 'dark';
 
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
@@ -56,5 +59,25 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     fontSize: 16,
     color: '#0a7ea4',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: isDarkMode ? '#121212' : '#ffffff', // Dark background for dark mode
+    padding: 16,
+  },
+  text: {
+    color: isDarkMode ? '#ffffff' : '#000000', // White text for dark mode, black for light
+  },
+  sectionHeader: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    paddingVertical: 10,
+    color: isDarkMode ? '#ffffff' : '#000000',
+  },
+  reminderItem: {
+    backgroundColor: isDarkMode ? '#333' : '#f9f9f9',
+    padding: 10,
+    borderRadius: 8,
+    marginVertical: 5,
   },
 });
