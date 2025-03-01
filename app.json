@@ -2,7 +2,7 @@
   "expo": {
     "name": "ReminderApp",
     "slug": "ReminderApp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -37,6 +37,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "notification": {
+      "color": "#6A7178"
     },
     "extra": {
       "router": {
