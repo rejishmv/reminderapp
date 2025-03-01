@@ -23,28 +23,10 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
-    },
     "notification": {
       "color": "#6A7178"
     },
     "extra": {
-      "router": {
-        "origin": false
-      },
       "eas": {
         "projectId": "36ed2cbc-fb75-4b69-be32-4ee841ca247d"
       }

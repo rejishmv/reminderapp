@@ -1,6 +1,6 @@
 import { Text, type TextProps, StyleSheet } from 'react-native';
-
-import { useThemeColor } from '@/hooks/useThemeColor';
+import React from 'react';
+import { useThemeColor } from '../hooks/useThemeColor';
 import { useColorScheme } from 'react-native';
 
 const isDarkMode = 'dark';
