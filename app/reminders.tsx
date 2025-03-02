@@ -163,11 +163,13 @@ const ReminderApp: React.FC = () => {
               }
             }
   
-            setCompletedReminders([...completedReminders, { ...completedItem, completed: true }]);
+            const newCompletedReminders = [...completedReminders, { ...completedItem }];
+            setCompletedReminders(newCompletedReminders);
+            setReminders(updatedReminders);
+            
+            // Ensure the completed reminder is included in the saved data
+            saveReminders([...updatedReminders, ...newCompletedReminders]);
           }
-  
-          setReminders(updatedReminders);
-          saveReminders([...updatedReminders, ...completedReminders]);
         },
       },
     ]);
